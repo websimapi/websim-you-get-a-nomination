@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You Get a Nomination!</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "canvas-confetti": "https://esm.sh/canvas-confetti@1.9.3"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <header class="site-header" role="banner">
+    <h1 class="title">And you get a nomination!</h1>
+    <p class="subtitle" aria-live="polite">Everyone gets a nomination.</p>
+  </header>
+
+  <main class="content" role="main">
+    <figure class="hero">
+      <img src="./oprah_nomination.png" alt="Oprah enthusiastically pointing to the audience" class="hero-image">
+      <figcaption class="visually-hidden">Oprah on stage saying: And you get a nomination!</figcaption>
+    </figure>
+
+    <div class="cta">
+      <button class="nominate-btn" id="nominateBtn" aria-describedby="counterDesc">
+        Get a nomination
+      </button>
+      <p id="counterDesc" class="counter" aria-live="polite">
+        Nominations given: <span id="count">0</span>
+      </p>
+      <p class="hint">Press N to nominate faster</p>
+    </div>
+
+    <audio id="cheerSfx" preload="auto">
+      <source src="./cheer.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p class="footnote">A lighthearted tribute to an iconic moment.</p>
+  </footer>
+
+  <script type="module" src="./script.js"></script>
+  <!-- ...existing content... -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
