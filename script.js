@@ -1,4 +1,3 @@
-// ...existing code...
 import confetti from "canvas-confetti";
 
 const btn = document.getElementById("nominateBtn");
@@ -40,12 +39,17 @@ function celebrate() {
   } catch {}
 }
 
-btn.addEventListener("click", celebrate);
-
-window.addEventListener("keydown", (e) => {
-  if (e.key.toLowerCase() === "n") {
+async function openNominationComment() {
+  if (window.websim?.postComment) {
+    window.websim.postComment({
+      content: "And you get a nomination! Spreading the nomination love across Websim 💖"
+    });
+  } else {
     celebrate();
   }
-});
-// ...existing code...
+}
 
+btn.addEventListener("click", openNominationComment);
+window.addEventListener("keydown", (e) => { if (e.key.toLowerCase() === "n") openNominationComment(); });
+
+window.websim?.addEventListener?.('comment:created', () => { celebrate(); });
